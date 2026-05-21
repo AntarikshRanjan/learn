@@ -2,17 +2,16 @@
 #include <iostream>
 using namespace std;
 void print(int n){
+    int start;
     for(int i=0;i<n;i++){
-        for(int j=0;j<i;j++){
-            cout<<" ";
+        if(i%2==0) start=1;
+        else start=0;
+        for(int j=0;j<=i;j++){
+            cout<<start;
+            start=1-start;
         }
-        for(int j=0;j<2*(n-i)-1;j++){
-            cout<<"*";
-        }
-        for(int j=0;j<i;j++){
-            cout<<" ";
-        }
-    cout<<endl;
+            cout<<endl;
+
     }
 }
 
